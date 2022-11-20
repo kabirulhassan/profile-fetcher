@@ -27,3 +27,31 @@ img{
 .app-home{
   margin: 2rem;
 }
+
+.repo-list{
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.repo-card{
+  border: 1px solid black;
+  flex: 1 1 45%;
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.repo-card h3{
+  margin: 0;
+}
+
+.lang-list{
+  gap: 10px;
+}
+
+.language{
+  background-color: #428bca;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}

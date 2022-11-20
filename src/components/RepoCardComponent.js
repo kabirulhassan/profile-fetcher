@@ -23,13 +23,15 @@ const RepoCardComponent = (props) => {
     },[]);
 
     return (
-        <div className="repo-card">
+        <>
             <h3>{repo.name}</h3>
             <p>{repo.description}</p>
-            {languageList?.map(language => (
-                <div className="language" key={language}>{language}</div>
-            ))}
-        </div>
+            <div className="row lang-list">
+                {languageList?.map(language => (
+                    <div className="language" key={language}>{language}</div>
+                ))}
+            </div>
+        </>
     );
 }
 

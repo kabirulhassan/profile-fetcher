@@ -18,9 +18,9 @@ const RepoComponent = (props) => {
     },[pageNumber]);
     
     return(
-        <div className="repo-list">
+        <div className="repo-list row">
             {repoList?.map(repo => (
-                <div className="repo" key={repo.id}>
+                <div className="repo-card col" key={repo.id}>
                     <RepoCardComponent repo={repo} />
                 </div>
             ))}
