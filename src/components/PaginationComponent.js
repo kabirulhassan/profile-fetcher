@@ -12,24 +12,26 @@ const PaginationComponent = (props) => {
         <>
         <RepoComponent pageNumber={page} userName={userName} />
         
-        <div className="pagination">
-        <nav>
-            <ul>
+        <div className="pagination col">
+        <div className="button-list">
             <button
+                className="page-button prev"
                 onClick={() => setPage(page - 1)}
                 disabled={page === 1}
             >Prev</button>
             {pageNumbers.map(number => (
-                <li key={number}>
-                    <a onClick={() => setPage(number)}>{number}</a>
-                </li>
+                <button
+                    className={`page-button ${number === page ? "active-page" : ""}`}
+                    key={number} 
+                    onClick={() => setPage(number)}>{number}
+                </button>
             ))}
             <button
+                className="page-button next"
                 onClick={() => setPage(page + 1)}
                 disabled={page === totalPages}
             >Next</button>
-            </ul>
-        </nav>
+        </div>
         </div>
         </>
     );
