@@ -21,6 +21,7 @@ const SearchUser = ()=>{
             setIsLoading(false);
             setUserData({"message": "Please enter a username"});
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     const getUserData = () => {
@@ -49,7 +50,10 @@ const SearchUser = ()=>{
     return(
         <div className="app-home">
             {isLoading ?
-                <p>Loading...</p> :
+                <div className="loader col">
+                    <div class="lds-dual-ring"></div>
+                    <h1>Loading User Data....</h1>
+                </div> :
                 <>
                     <UserDataComponent userData={userData} />
                     <PaginationComponent totalPages={totalPages} userName={userData?.login}/>

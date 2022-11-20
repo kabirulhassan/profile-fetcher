@@ -15,6 +15,7 @@ const RepoComponent = (props) => {
         .then(data => {
             setRepoList(data);
         });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[pageNumber]);
     
     return(

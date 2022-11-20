@@ -20,6 +20,7 @@ const RepoCardComponent = (props) => {
 
     useEffect(() => {
         getLanguages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     return (

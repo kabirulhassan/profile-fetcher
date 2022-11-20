@@ -18,7 +18,7 @@ const PaginationComponent = (props) => {
                 className="page-button prev"
                 onClick={() => setPage(page - 1)}
                 disabled={page === 1}
-            >Prev</button>
+            >&lt;&lt;</button>
             {pageNumbers.map(number => (
                 <button
                     className={`page-button ${number === page ? "active-page" : ""}`}
@@ -30,7 +30,7 @@ const PaginationComponent = (props) => {
                 className="page-button next"
                 onClick={() => setPage(page + 1)}
                 disabled={page === totalPages}
-            >Next</button>
+            >&gt;&gt;</button>
         </div>
         </div>
         </>
