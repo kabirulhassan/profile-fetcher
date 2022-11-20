@@ -9,7 +9,6 @@ const SearchUser = ()=>{
     const [isLoading, setIsLoading] = useState(false);
     const [userData, setUserData] = useState({});
     const [error, setError] = useState(null);
-    const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
   
     
@@ -53,7 +52,7 @@ const SearchUser = ()=>{
                 <p>Loading...</p> :
                 <>
                     <UserDataComponent userData={userData} />
-                    <PaginationComponent page={page} totalPages={totalPages} setPage={setPage} />
+                    <PaginationComponent totalPages={totalPages} userName={userData?.login}/>
                 </>
 
             }

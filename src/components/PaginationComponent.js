@@ -1,12 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
+import RepoComponent from "./RepoComponent";
 
 const PaginationComponent = (props) => {
-    const { page, setPage, totalPages } = props;
+    const [page, setPage] = useState(1);
+    const { totalPages, userName } = props;
     const pageNumbers = [];
     for(let i = 1; i <= totalPages; i++){
         pageNumbers.push(i);
     }
     return (
+        <>
+        <RepoComponent pageNumber={page} userName={userName} />
+        
         <div className="pagination">
         <nav>
             <ul>
@@ -26,6 +31,7 @@ const PaginationComponent = (props) => {
             </ul>
         </nav>
         </div>
+        </>
     );
 }
 
