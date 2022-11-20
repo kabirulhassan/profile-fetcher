@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from "react";
+import RepoCardComponent from "./RepoCardComponent";
 
 const RepoComponent = (props) => {
     const {pageNumber, userName} = props;
@@ -20,7 +21,7 @@ const RepoComponent = (props) => {
         <div className="repo-list">
             {repoList?.map(repo => (
                 <div className="repo" key={repo.id}>
-                    <h3>{repo.name}</h3>
+                    <RepoCardComponent repo={repo} />
                 </div>
             ))}
         </div>

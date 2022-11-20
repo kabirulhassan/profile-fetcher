@@ -3,3 +3,27 @@ img{
   width: 200px;
   border-radius: 50%;
 }
+
+.row{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-data p{
+  margin: 0;
+}
+
+.user-img{
+  align-items: center;
+}
+
+.app-home{
+  margin: 2rem;
+}

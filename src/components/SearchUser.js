@@ -47,7 +47,7 @@ const SearchUser = ()=>{
     }
 
     return(
-        <div>
+        <div className="app-home">
             {isLoading ?
                 <p>Loading...</p> :
                 <>
