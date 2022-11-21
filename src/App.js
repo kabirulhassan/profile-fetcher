@@ -24,6 +24,7 @@ function App() {
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = () => {
@@ -34,13 +35,16 @@ function App() {
     }
   };
   return (
-    <div>
-      <input 
-      name="username" 
-      placeholder="Enter username" 
-      onChange={handleUserNameChange}
-      />
-      <button onClick={handleSubmit}>Get Github Data</button>
+    <div className="search-page col">
+      <h1>Get Github Data</h1>
+      <div className="search-box row">
+        <input 
+        name="username" 
+        placeholder="Enter username" 
+        onChange={handleUserNameChange}
+        />
+        <button onClick={handleSubmit}>Get Data</button>
+      </div>
     </div>
   );
 }

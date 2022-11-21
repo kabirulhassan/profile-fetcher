@@ -16,6 +16,37 @@ img{
   gap: 10px;
 }
 
+
+.search-page{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.search-box{
+  justify-content: center;
+  gap: 0;
+  border: 2px solid #428bca;
+  border-radius: 30px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.search-box input{
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size:  16px;
+}
+
+.search-box button{
+  background-color: #428bca;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size:  16px;
+}
+
 .user-data p{
   margin: 0;
 }
