@@ -52,7 +52,7 @@ const SearchUser = ()=>{
                 <RotateLoader message="Loading User Data...."/>:
                 <>
                     <UserDataComponent userData={userData} />{
-                    userData.public_repos &&
+                    userData.public_repos && userData.public_repos!==0 &&
                         <PaginationComponent totalPages={totalPages} userName={userData?.login}/>
                     }
                 </>

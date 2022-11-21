@@ -6,6 +6,15 @@
   padding: 3px;
 }
 
+.github-message{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff0000;
+  text-align: center;
+  width: 100%;
+}
+
 a{
   text-decoration: none;
   color: #000;

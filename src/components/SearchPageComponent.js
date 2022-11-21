@@ -39,6 +39,7 @@ const SearchPageComponent = () => {
         name="username" 
         placeholder="Enter username" 
         onChange={handleUserNameChange}
+        autoComplete="off"
         />
         <button onClick={handleSubmit}>Get Data</button>
       </div>
