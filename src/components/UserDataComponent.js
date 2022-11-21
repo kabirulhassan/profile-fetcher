@@ -19,13 +19,13 @@ const UserDataComponent = (props) => {
             <div className="col user-info">
                 <h1>{userData.name}</h1>
                 <p>{userData.bio}</p>
-                <p>
+                <div className="row">
                     <FaMapMarkerAlt />{
                     userData.location ?
                         userData.location :
                         <>Location Not Available</>
                 }
-                </p>
+                </div>
                 <p>Twitter: {
                     userData.twitter_username ?
                         <a href = {`${twitterURL}${userData.twitter_username}`} target="blank">{`${twitterURL}${userData.twitter_username}`}</a> :

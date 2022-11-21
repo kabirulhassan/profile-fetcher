@@ -79,7 +79,7 @@ a{
 .repo-card{
   border: 1px solid black;
   flex: 0 0 45%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   padding: 10px;
   justify-content: space-between;
   height: 28vh;
