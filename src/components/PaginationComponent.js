@@ -32,6 +32,20 @@ const PaginationComponent = (props) => {
                 disabled={page === totalPages}
             >&gt;&gt;</button>
         </div>
+        <div className="page-nav">
+            <button
+                    className="page-nav-button"
+                    onClick={() => setPage(page - 1)}
+                    disabled={page === 1}
+            >
+            Older
+            </button>
+            <button
+                className="page-nav-button"
+                onClick={() => setPage(page + 1)}
+                disabled={page === totalPages}
+            >Newer</button>
+        </div>
         </div>
         </>
     );
