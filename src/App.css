@@ -1,7 +1,9 @@
-img{
-  height: 200px;
-  width: 200px;
+.user-img img{
+  height: 170px;
+  width: 170px;
+  border: #9b9b9b 1px solid;
   border-radius: 50%;
+  padding: 3px;
 }
 
 a{
