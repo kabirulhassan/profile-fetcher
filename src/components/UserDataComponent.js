@@ -7,7 +7,7 @@ const UserDataComponent = (props) => {
     return (
         <div className="row user-data">
         {userData.message ? 
-        <div className="github-message">Error: {userData.message}</div> :
+        <div className="github-message">Error: {userData.message} ¯\_(ツ)_/¯</div> :
         <>
             <div className="col user-img">
                 <img src={userData.avatar_url} alt="user avatar" />
