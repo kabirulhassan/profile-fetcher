@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import UserDataComponent from './UserDataComponent';
 import PaginationComponent from './PaginationComponent';
 import '../App.css';
+import RotateLoader from './RotateLoader';
 
 const SearchUser = ()=>{
     const {userName} = useParams();
@@ -16,7 +17,6 @@ const SearchUser = ()=>{
         setIsLoading(true);
         if(userName){
             getUserData();
-            console.log("userName: ", userName);
         }else{
             setIsLoading(false);
             setUserData({"message": "Please enter a username"});
@@ -32,7 +32,6 @@ const SearchUser = ()=>{
         }})
           .then(response => response.json())
           .then(data => {
-            console.log(data);
             setUserData(data);
             if(data.public_repos){
                 setTotalPages(Math.ceil(data.public_repos/6));
@@ -50,10 +49,7 @@ const SearchUser = ()=>{
     return(
         <div className="app-home">
             {isLoading ?
-                <div className="loader col">
-                    <div class="lds-dual-ring"></div>
-                    <h1>Loading User Data....</h1>
-                </div> :
+                <RotateLoader message="Loading User Data...."/>:
                 <>
                     <UserDataComponent userData={userData} />{
                     userData.public_repos &&

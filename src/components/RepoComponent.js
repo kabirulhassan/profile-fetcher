@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from "react";
 import RepoCardComponent from "./RepoCardComponent";
+import RotateLoader from "./RotateLoader";
 
 const RepoComponent = (props) => {
     const {pageNumber, userName} = props;
@@ -27,10 +28,7 @@ const RepoComponent = (props) => {
     return(
         <>
         {isLoading ?
-            <div className="loader col">
-                <div class="lds-dual-ring"></div>
-                <h1>Loading Repository Data....</h1>
-            </div> :
+            <RotateLoader message="Loading Repository Data...."/>:
             <div className="repo-list row">
                 {repoList?.map(repo => (
                     <div className="repo-card col" key={repo.id}>

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import ElipsisLoader from "./ElipsisLoader";
 
 const RepoCardComponent = (props) => {
     const {repo} = props;
@@ -34,9 +35,7 @@ const RepoCardComponent = (props) => {
             <p>{repo.description}</p>
             <div className="lang-div">
                 {isLoading ?
-                    <>
-                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                    </>
+                    <ElipsisLoader/>
                     :
                     <div className="row lang-list">
                         {languageList?.map(language => (
