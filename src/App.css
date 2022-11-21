@@ -4,10 +4,15 @@ img{
   border-radius: 50%;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 .row{
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -50,6 +55,9 @@ img{
 
 .user-data p{
   margin: 0;
+}
+.user-data{
+  gap: 2rem;
 }
 
 .user-img{
@@ -112,12 +120,15 @@ img{
 }
 
 .page-nav-button{
+  align-items: center;
   border: 1px solid #eeeeee;
   background-color: white;
   color: #428bca;
   padding: 5px 10px;
   border-radius: 20px;
   cursor: pointer;
+  gap: 2px;
+  min-width: 80px;
 }
 .page-nav-button:disabled{
   color: #9b9b9b;

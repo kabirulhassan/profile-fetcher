@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import RepoComponent from "./RepoComponent";
+import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 
 const PaginationComponent = (props) => {
     const [page, setPage] = useState(1);
@@ -34,17 +35,20 @@ const PaginationComponent = (props) => {
         </div>
         <div className="page-nav">
             <button
-                    className="page-nav-button"
+                    className="page-nav-button row"
                     onClick={() => setPage(page - 1)}
                     disabled={page === 1}
             >
+            <FaArrowLeft />
             Older
             </button>
             <button
-                className="page-nav-button"
+                className="page-nav-button row"
                 onClick={() => setPage(page + 1)}
                 disabled={page === totalPages}
-            >Newer</button>
+            >Newer
+            <FaArrowRight/>
+            </button>
         </div>
         </div>
         </>
