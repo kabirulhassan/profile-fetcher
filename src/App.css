@@ -8,6 +8,7 @@ img{
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .col{
@@ -62,14 +63,21 @@ img{
 .repo-list{
   flex-wrap: wrap;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .repo-card{
   border: 1px solid black;
-  flex: 1 1 45%;
+  flex: 0 0 45%;
   box-sizing: border-box;
   padding: 10px;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 768px){
+  .repo-card{
+    flex: 0 0 100%;
+  }
 }
 
 .repo-card h3{

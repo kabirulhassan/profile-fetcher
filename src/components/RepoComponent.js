@@ -7,6 +7,7 @@ const RepoComponent = (props) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        setIsLoading(true);
         fetch(`https://api.github.com/users/${userName}/repos?page=${pageNumber}&per_page=6`,{
             method: 'GET',
             headers: {
