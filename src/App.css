@@ -64,6 +64,8 @@ img{
   flex-wrap: wrap;
   margin-top: 2rem;
   justify-content: center;
+  gap: 3rem;
+  min-height: 100vh;
 }
 
 .repo-card{
@@ -72,6 +74,7 @@ img{
   box-sizing: border-box;
   padding: 10px;
   justify-content: space-between;
+  height: 28vh;
 }
 
 @media screen and (max-width: 768px){
@@ -88,9 +91,6 @@ img{
   gap: 10px;
 }
 
-.lang-div{
-  height: 30px;
-}
 
 .language{
   background-color: #428bca;
@@ -146,6 +146,7 @@ img{
 }
 
 .loader{
+  margin-top: 2rem;
   height: 100vh;
   align-items: center;
   justify-content: center;

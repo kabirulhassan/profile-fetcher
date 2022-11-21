@@ -27,7 +27,7 @@ const RepoComponent = (props) => {
     return(
         <>
         {isLoading ?
-            <div className="loader-half col">
+            <div className="loader col">
                 <div class="lds-dual-ring"></div>
                 <h1>Loading Repository Data....</h1>
             </div> :

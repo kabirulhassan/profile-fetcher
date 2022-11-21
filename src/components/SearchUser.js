@@ -55,8 +55,10 @@ const SearchUser = ()=>{
                     <h1>Loading User Data....</h1>
                 </div> :
                 <>
-                    <UserDataComponent userData={userData} />
-                    <PaginationComponent totalPages={totalPages} userName={userData?.login}/>
+                    <UserDataComponent userData={userData} />{
+                    userData.public_repos &&
+                        <PaginationComponent totalPages={totalPages} userName={userData?.login}/>
+                    }
                 </>
 
             }

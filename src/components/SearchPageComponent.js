@@ -22,7 +22,7 @@ const SearchPageComponent = () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [userName]);
 
   const handleSubmit = () => {
     if(userName){
