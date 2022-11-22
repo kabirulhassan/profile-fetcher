@@ -11,7 +11,7 @@ const RepoCardComponent = (props) => {
         fetch(repo.languages_url,{
             method: 'GET',
             headers: {
-                'Authorization': process.env.REACT_APP_GITHUB_API_KEY
+                'Authorization': `token ${process.env.REACT_APP_TOKEN}`
         }})
         .then(response => response.json())
         .catch(error => console.log(error))
