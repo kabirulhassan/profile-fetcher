@@ -12,7 +12,6 @@ const SearchPageComponent = () => {
 
   useEffect(() => {
     const keyDownHandler = event => {
-      console.log('User pressed: ', event.key);
       if (event.key === 'Enter') {
         handleSubmit();
       }
