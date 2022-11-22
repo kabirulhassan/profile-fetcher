@@ -124,6 +124,13 @@ a{
   width: max-content;
 }
 
+.button-list{
+  gap:0;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  justify-content: center;
+}
+
 .page-nav{
   display: flex;
   justify-content: space-between;

@@ -14,7 +14,7 @@ const PaginationComponent = (props) => {
         <RepoComponent pageNumber={page} userName={userName} />
         
         <div className="pagination col">
-        <div className="button-list">
+        <div className="button-list row">
             <button
                 className="page-button prev"
                 onClick={() => setPage(page - 1)}
