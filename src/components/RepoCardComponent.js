@@ -10,9 +10,9 @@ const RepoCardComponent = (props) => {
     const getLanguages = () => {
         fetch(repo.languages_url,{
             method: 'GET',
-            headers: {
+            headers: process.env.REACT_APP_TOKEN?{
                 'Authorization': `token ${process.env.REACT_APP_TOKEN}`
-        }})
+        }:{}})
         .then(response => response.json())
         .catch(error => console.log(error))
         .then(data => {

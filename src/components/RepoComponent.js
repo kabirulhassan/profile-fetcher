@@ -11,9 +11,9 @@ const RepoComponent = (props) => {
         setIsLoading(true);
         fetch(`https://api.github.com/users/${userName}/repos?page=${pageNumber}&per_page=6`,{
             method: 'GET',
-            headers: {
+            headers: process.env.REACT_APP_TOKEN?{
                 'Authorization': `token ${process.env.REACT_APP_TOKEN}`
-        }})
+        }:{}})
         .then(response => response.json())
         .catch(error => console.log(error))
         .then(data => {

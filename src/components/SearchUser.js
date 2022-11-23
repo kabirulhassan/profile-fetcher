@@ -27,9 +27,9 @@ const SearchUser = ()=>{
     const getUserData = () => {
         fetch(`https://api.github.com/users/${userName}`,{
             method: 'GET',
-            headers: {
+            headers: process.env.REACT_APP_TOKEN?{
                 'Authorization': `token ${process.env.REACT_APP_TOKEN}`
-        }})
+        }:{}})
           .then(response => response.json())
           .then(data => {
             setUserData(data);
