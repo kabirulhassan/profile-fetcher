@@ -9,7 +9,7 @@ const RepoComponent = (props) => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(`https://api.github.com/users/${userName}/repos?page=${pageNumber}&per_page=6`,{
+        fetch(`https://api.github.com/users/${userName}/repos?page=${pageNumber}&per_page=6&sort=created&direction=asc`,{
             method: 'GET',
             headers: process.env.REACT_APP_TOKEN?{
                 'Authorization': `token ${process.env.REACT_APP_TOKEN}`
