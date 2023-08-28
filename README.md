@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Live Hosted URL
 
-Open [https://shortitkh.netlify.app/](https://shortitkh.netlify.app/) to view it in your browser.
+Open [[https://shortitkh.netlify.app/](https://profile-fetcher.netlify.app/)](https://profile-fetcher.netlify.app/) to view it in your browser.
 
 ## Usage
 
